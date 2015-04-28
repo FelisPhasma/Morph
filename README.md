@@ -1,6 +1,7 @@
 # Morph
-> <center>#[Homepage]()</center>
-> <center>#[Download]()</center>
+> <div style="text-align:center">#[Homepage]()</div>
+
+<div style="text-align:center">#[Download]()</div>
 
 Morph is free Mac screensaver made by FelisPhasma, written in Objective-C.
 
