@@ -10,19 +10,6 @@
 @synthesize option_minConnectionDistance;
 @synthesize minConnectionSliderValue;
 
-/**
- ** Lib
- **
-**/
--(void) drawText:(double) x :(double) y : (NSString*) txt {
-	//note we are using the convenience method, so we don't need to autorelease the object
-	NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:[NSFont fontWithName:@"Helvetica" size:26], NSFontAttributeName,[NSColor blackColor], NSForegroundColorAttributeName, nil];
-	NSAttributedString * currentText=[[NSAttributedString alloc] initWithString:txt attributes: attributes];
-	//NSSize attrSize = [currentText size];
-	[currentText drawAtPoint:NSMakePoint(x, y)];
-}
-//End
-
 static NSString * const moduleName = @"com.FelisPhasma.Morph";
 static int const numDots = 100;
 dot *dots[numDots];
