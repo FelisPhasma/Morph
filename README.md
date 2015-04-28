@@ -1,5 +1,5 @@
 # Morph
-> ##[Homepage](http://felisphasma.github.io/Morph)   [Download](https://github.com/FelisPhasma/Morph/blob/master/Morph.saver.zip?raw=true)
+> ##[Homepage](http://felisphasma.github.io/Morph) **|** [Download](https://github.com/FelisPhasma/Morph/blob/master/Morph.saver.zip?raw=true)
 
 Morph is free Mac screensaver made by FelisPhasma, written in Objective-C.
 
