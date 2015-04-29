@@ -5,8 +5,6 @@ Morph is free Mac screensaver made by FelisPhasma, written in Objective-C.
 
 ![Morph screenshot](http://felisphasma.github.io/files/MorphDemoA.png "Morph screenshot")
 
-> ###[Download](https://github.com/FelisPhasma/Morph/blob/master/Morph.saver.zip?raw=true)
-
 # Licence
 The MIT License (MIT)
 
