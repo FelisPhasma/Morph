@@ -14,6 +14,7 @@ static NSString * const moduleName = @"com.FelisPhasma.Morph";
 static int const numDots = 100;
 dot *dots[numDots];
 double minConnectionDist = 100.0;
+static double const maxVelocity = 4;
 
 - (instancetype)initWithFrame:(NSRect)frame isPreview:(BOOL)isPreview{
 	self = [super initWithFrame:frame isPreview:isPreview];
@@ -24,8 +25,8 @@ double minConnectionDist = 100.0;
 									@"YES", @"multiColor",
 									@"100.0", @"minConnectionDistance",
 									nil]];
-		//[self setAnimationTimeInterval:1/30.0];
-		[self setAnimationTimeInterval:1/60.0];
+		[self setAnimationTimeInterval:1/30.0];
+		//[self setAnimationTimeInterval:1/60.0]; Not this due to frame gliches
 	}
 	return self;
 }
@@ -125,7 +126,7 @@ double minConnectionDist = 100.0;
 		[color set];
 		[path fill];
 		// Update
-		[dots[i] update:size.width:size.height];
+		[dots[i] update:size.width:size.height:maxVelocity];
 	}
 }
 

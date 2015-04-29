@@ -13,6 +13,6 @@
 @property CGFloat saturation;
 @property CGFloat brightness;
 -(void) initDot:(int) width :(int) height :(int) size;
--(void) update:(int) width :(int) height;
+-(void) update:(int) width :(int) height :(double) maxVel;
 
 @end

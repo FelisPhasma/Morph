@@ -17,9 +17,9 @@
 -(void) initDot:(int) width :(int) height :(int) size {
 	// Position and velocity
 	self.x = [lib doubleRand:0 :width];
-	self.vx = [lib doubleRand:-1 :1];
+	self.vx = [lib doubleRand:-2 :2];
 	self.y = [lib doubleRand:0 :height];
-	self.vy = [lib doubleRand:-1 :1];
+	self.vy = [lib doubleRand:-2 :2];
 	// Size
 	self.radius = size;
 	// Color
@@ -27,10 +27,15 @@
 	self.saturation = (arc4random() % 128 / 256.0) + 0.5;
 	self.brightness = (arc4random() % 128 / 256.0) + 0.5;
 };
--(void) update:(int) width :(int) height{
+-(void) update:(int) width :(int) height :(double) maxVel{
 	// Position
 	self.x += self.vx;
 	self.y += self.vy;
+	// Velocity control
+	if(abs(self.vx) > maxVel)
+		self.vx = (self.vx < 0) ? -maxVel : maxVel;
+	if(abs(self.vy) > maxVel)
+		self.vy = (self.vy < 0) ? -maxVel : maxVel;
 	// Off screen detection
 	if(self.x + self.radius > width)
 		self.x = self.radius;
